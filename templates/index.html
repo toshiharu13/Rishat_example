@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Магазин продажи штучек{% endblock %}
+{% block header %}Последние обновления на сайте{% endblock %}
+{% block content %}
+
+    {% for item in items %}
+    <h3>
+        Товар: {{ item.name }}, Цена: {{ item.price }}
+    </h3>
+    <p>{{ item.description|linebreaksbr }}</p>
+    {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+
+{% endblock %} 
