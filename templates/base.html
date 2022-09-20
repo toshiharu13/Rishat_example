@@ -1,3 +1,11 @@
-{% block header %}The Last Social Media You'll Ever Need{% endblock %}
+<!doctype html>
+<html>
 
-{% block content %} {% endblock %}
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+  {% block header %}{% endblock %}
+  {% block content %}{% endblock %}
+</body>
+</html>

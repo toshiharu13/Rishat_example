@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Магазин продажи штучек{% endblock %}
+{% block header %}Описание товара{% endblock %}
+{% block content %}
+  <p>Товар:</p> <h3>{{ item.name }}</h3>
+  Цена: {{ item.price }}
+  <p>{{ item.description|linebreaksbr }}</p>
+  <button >купить</button>
+  <form action="{% url 'index' %}">
+    <input type="submit" value="Назад" />
+  </form>
+{% endblock %}
+
+

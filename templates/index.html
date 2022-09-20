@@ -4,10 +4,9 @@
 {% block content %}
 
     {% for item in items %}
-    <h3>
-        Товар: {{ item.name }}, Цена: {{ item.price }}
-    </h3>
-    <p>{{ item.description|linebreaksbr }}</p>
+    <p>Товар:</p>
+    <a href="{% url 'product_view' item.id %}">{{ item.name }}</a>
+    <p>Цена: {{ item.price }}</p>
     {% if not forloop.last %}<hr>{% endif %}
     {% endfor %}
 
